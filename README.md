@@ -17,17 +17,21 @@ sudo chmod 666 /var/log/<your_log_filename>.log
 ### Run
 
 Go to your Project and run your command
+
 `<your_command> >> /var/log/<your_log_filename>.log 2>> /var/log/<your_log_filename>.log`
 
 When you want the log output also in a Terminal run this
+
 `tail -f /var/log/<your_log_filename>.log`
 
 _Example_
-`npm run start >> /var/log/fidentity-server.log 2>> /var/log/fidentity-server.log
-`
+
+`npm run start >> /var/log/fidentity-server.log 2>> /var/log/fidentity-server.log`
 
 Open your Grafana on `https://localhost:3000`
 
 Log in with this credentials
+
 Username: admin
+
 Password: admin
