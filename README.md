@@ -35,3 +35,7 @@ Log in with this credentials
 Username: admin
 
 Password: admin
+
+### Grafana
+
+[Loki Query how filter log stream](https://grafana.com/docs/loki/latest/logql/log_queries/)
