@@ -4,7 +4,7 @@ This Repo is for transform log output of local Terminal logs to Grafana for bett
 
 ### Install
 
-Run the docker compose file. The docker compose file is for running Grafana Loki and Promtail.
+Run the docker compose file. The docker compose file is for running Grafana, Loki and Promtail.
 `docker compose up`
 
 Prepare your logging file
@@ -18,19 +18,21 @@ sudo chmod 666 /var/log/<your_log_filename>.log
 
 Go to your Project and run your command
 
-`<your_command> >> /var/log/<your_log_filename>.log 2>> /var/log/<your_log_filename>.log`
+```bash
+<your_command> >> /var/log/<your_log_filename>.log 2>> /var/log/<your_log_filename>.log
+# Example
+npm run start >> /var/log/fidentity-server.log 2>> /var/log/fidentity-server.log
+```
+
+The double `>>` appends logs add the log file, if you want to overwrite the log file you only have to use a `>`.
 
 When you want the log output also in a Terminal run this
 
 `tail -f /var/log/<your_log_filename>.log`
 
-_Example_
+**Look at the Logs**
 
-`npm run start >> /var/log/fidentity-server.log 2>> /var/log/fidentity-server.log`
-
-Open your Grafana on `https://localhost:3000`
-
-Log in with this credentials
+Open your Grafana on `https://localhost:3000` and Log in with this credentials
 
 Username: admin
 
